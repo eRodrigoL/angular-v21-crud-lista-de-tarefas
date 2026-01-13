@@ -6,9 +6,9 @@ Aplicação web para treino do CRUD no framework Angular 21.
 
 ---
 
-## Ambiente
+## 1 - Ambiente
 
-Aplicação desenvolvida em **Angular** dentro de um ambiente Linux (WSL2) com **Node.js gerenciado via NVM**.
+Aplicação desenvolvido em **Angular** dentro de um ambiente Linux (WSL2) com **Node.js gerenciado via NVM**.
 
 ```txt
 Node.js (LTS)  v24.12.0
@@ -16,9 +16,9 @@ npm            11.6.2
 npx            11.6.2
 ```
 
-### Frontend
+### 1.1 - Frontend
 
-Aplicação densenvolvida em **Angular 21** (versão LTS mais recente) através do comando:
+O frontend da aplicação foi densenvolvida em **Angular 21** (versão LTS mais recente) e criado através do comando:
 
 ```bash
 npx @angular/cli@latest new angular-v21-crud-lista-de-tarefas
@@ -34,16 +34,31 @@ npx @angular/cli@latest new angular-v21-crud-lista-de-tarefas
 > Operating System  : linux x64
 > ```
 
-#### Configurações escolhidas
+Durante a inicialização do projeto o CLI realiza algumas perguntas, as quais foram selecionadas as seguintes respostas:
 
-- **Framework**: Angular 21
 - **Estilos**: Sass (SCSS)
 - **SSR / SSG**: não habilitado
 - **Ferramentas de IA**: não configuradas
 
+### 1.2 - Backend
+
+O backend da aplicação foi desenvolvido em **json-server** simulando uma API (**API REST fake**) a partir de um arquivo JSON. O Json Server foi instalado através do comando:
+
+```bash
+npm install json-server --save-dev
+```
+
+> Versão (logo após instalações)
+>
+> ```json
+> "devDependencies": {
+>   "json-server": "^1.0.0-beta.3"
+> }
+> ```
+
 ---
 
-## Instruções de uso
+## 2 - Instruções de uso
 
 Como o Angular CLI **não foi instalado globalmente**, os comandos devem ser executados a partir do contexto do projeto.
 
@@ -60,5 +75,3 @@ Alternativamente, o comando abaixo também é válido:
 ```bash
 npx ng serve
 ```
-
----
