@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run seed && concurrently \"npm run api\" \"ng serve\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "api": "json-server --watch api-simulada/dados.json --port 3000",
+    "seed": "node -e \"require('fs').copyFileSync('api-simulada/dados-iniciais.json', 'api-simulada/dados.json')\""
   },
   "prettier": {
     "printWidth": 100,

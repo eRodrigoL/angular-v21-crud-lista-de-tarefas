@@ -1,0 +1,28 @@
+{
+  "tarefas": [
+    {
+      "id": "3b6c",
+      "dataLimite": "2026-03-15",
+      "resumo": "Pintar o céu",
+      "descricao": "Se o céu estiver acinzentado, pintá-lo todo"
+    },
+    {
+      "id": "270e",
+      "dataLimite": "3075-02-03",
+      "resumo": "Viagem interplanetária",
+      "descricao": "Viagem para conhecer os anéis de saturno"
+    },
+    {
+      "id": "bf60",
+      "dataLimite": "2027-07-04",
+      "resumo": "Esquiar na lava",
+      "descricao": "Não esquecer o protetor solar"
+    },
+    {
+      "id": "d77c",
+      "dataLimite": "2099-01-01",
+      "resumo": "Fabricar óculos de sol noturno",
+      "descricao": "Para se um dia a noite clarear com um eclipse ao contrário"
+    }
+  ]
+}

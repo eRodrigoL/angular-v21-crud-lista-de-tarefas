@@ -41,3 +41,6 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Arquivo gerado para o json-server
+api-simulada/dados.json
