@@ -6,7 +6,7 @@
 
 O **concurrently** [🌐](https://www.npmjs.com/package/concurrently) é uma ferramenta que permite executar **múltiplos comandos simultaneamente** em um único terminal.
 
-Ela é amplamente utilizada em projetos frontend para:
+Ela é amplamente utilizada em projetos para:
 
 - iniciar múltiplos serviços ao mesmo tempo
 - reduzir a quantidade de terminais abertos durante o desenvolvimento

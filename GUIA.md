@@ -56,7 +56,7 @@ O comando completo para criar o projeto foi: `npx @angular/cli@latest new angula
 
 ---
 
-## 2 - Configuração do backend
+## 2 - Configuração do backend (API falsa)
 
 ### 2.Passo 1: Instalação do json-server
 
@@ -154,3 +154,60 @@ Para isso, foi criado um script responsável por copiar a matriz (`dados-iniciai
 ```
 
 Esse fluxo evita commits desnecessários, garante consistência nos testes CRUD e mantém o ambiente de desenvolvimento sempre previsível.
+
+---
+
+## 3 - Definição de Aliases
+
+**Aliases** [🔎](docs/alias.md) são mapeamentos semânticos de caminhos utilizados para abstrair e organizar a estrutura interna de um projeto. Em outras palavras, funcionam como atalhos (apelidos) que simplificam a resolução de caminhos.
+
+Como parte da organização estrutural do projeto, foram definidos **aliases de importação** no arquivo `tsconfig.json`, seguindo boas práticas adotadas em projetos Angular modernos.
+
+Foram definidos os seguintes aliases principais:
+
+- `@app` — ponto de entrada e estruturas centrais da aplicação
+- `@componentes` — componentes visuais reutilizáveis
+- `@servicos` — serviços responsáveis por regras de negócio e acesso a dados
+
+O objetivo principal foi:
+
+- reduzir o uso excessivo de caminhos relativos (`../`)
+- melhorar a legibilidade e previsibilidade dos imports
+- facilitar refatorações e reorganizações futuras
+- manter um padrão claro de acesso às camadas da aplicação
+
+---
+
+## 4 - Geração dos Artefatos
+
+Após a definição dos aliases, foi criada a **estrutura de pastas correspondente**, garantindo coerência entre:
+
+- o mapeamento de paths no `tsconfig.json`
+- a organização real do código-fonte
+
+Aproveitando a criação da estrutura de pastas, foram também gerados os artefatos planejado para o projeto.
+
+**Artefatos** (Schematics) são unidades estruturais da aplicação, como componentes, serviços e outros elementos responsáveis por organizar, renderizar e dar comportamento ao sistema.
+
+Todos os artefatos criados nesta etapa (componentes e serviços) foram gerados utilizando o **Angular CLI**, por meio do comando `ng generate` [🔎](docs/ng-generate.md), garantindo:
+
+- criação automática dos arquivos padrão
+- aplicação correta das convenções do framework
+- integração imediata com o sistema de build e tipagem
+
+### Componentes criados
+
+```bash
+npx ng generate component componentes/cabecalho
+npx ng generate component componentes/cartao
+npx ng generate component componentes/lista
+npx ng generate component componentes/modal
+```
+
+### Serviço criado
+
+```bash
+npx ng generate service servicos/tarefa.service
+```
+
+> **Nota:** A criação via CLI evita inconsistências estruturais e assegura que cada artefato siga o padrão recomendado pelo Angular, facilitando manutenção, testes e escalabilidade do projeto.
